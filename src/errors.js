@@ -14,8 +14,7 @@ const phrases = {
 
 class PhraseError extends Error {
   constructor(message) {
-    super();
-    this.message = message;
+    super(message);
     this.name = "PhraseError";
   }
 }
@@ -52,8 +51,8 @@ function makePage(url) {
 }
 
 try {
-  //   const page = makePage("index.html");
-  const page = makePage("ind");
+  const page = makePage("index.html");
+  // const page = makePage("ind");
   console.log(page);
 } catch (e) {
   if (e instanceof HttpError) {
